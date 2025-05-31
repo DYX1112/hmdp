@@ -6,6 +6,7 @@ import com.hmdp.utils.RedisClient;
 import com.hmdp.utils.RedisConstants;
 import com.hmdp.utils.RedisIDGenerator;
 import org.junit.jupiter.api.Test;
+import org.redisson.api.RLock;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
@@ -67,4 +68,5 @@ public class hmdpTest {
 
         redisClient.setWithLogicExpire(CACHE_SHOP_KEY+1L,shop, CACHE_SHOP_TTL, TimeUnit.SECONDS);
     }
+
 }
